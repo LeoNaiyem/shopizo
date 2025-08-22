@@ -1,0 +1,680 @@
+rollers\Backend\UserController@create                                | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin/users/{user}                          | admin.users.show              | App\Http\Controllers\Backend\UserController@show                                  | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | PUT|PATCH | admin/users/{user}                          | admin.users.update            | App\Http\Controllers\Backend\UserController@update                                | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | DELETE    | admin/users/{user}                          | admin.users.destroy           | App\Http\Controllers\Backend\UserController@destroy                               | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin/users/{user}/edit                     | admin.users.edit              | App\Http\Controllers\Backend\UserController@edit                                  | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin/zones                                 | zone.info                     | App\Http\Controllers\ZoneController@zonedata                                      | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_order/assign_user                     |                               | App\Http\Controllers\Backend\OrderController@assignuser                           | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_order/cities                          |                               | App\Http\Controllers\Backend\OrderController@city                                 | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_order/count                           |                               | App\Http\Controllers\Backend\OrderController@countorder                           | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_order/count/{id}                      |                               | App\Http\Controllers\Backend\OrderController@countorderbyid                       | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_order/courier                         |                               | App\Http\Controllers\Backend\OrderController@courier                              | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_order/couriers                        |                               | App\Http\Controllers\Backend\OrderController@couriers                             | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_order/delete_selected_order           |                               | App\Http\Controllers\Backend\OrderController@delete_selected_order                | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | POST      | admin_order/download/excel                  | file-export                   | App\Http\Controllers\InvoiceController@fileExport                                 | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_order/getComment                      |                               | App\Http\Controllers\Backend\OrderController@getComments                          | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_order/invoice/{id}                    |                               | App\Http\Controllers\Backend\OrderController@viewInvoice                          | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_order/paymentnumber                   |                               | App\Http\Controllers\Backend\OrderController@paymentnumber                        | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_order/paymenttype                     |                               | App\Http\Controllers\Backend\OrderController@paymenttype                          | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_order/previous_orders                 |                               | App\Http\Controllers\Backend\OrderController@previous_orders                      | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_order/product/recentsell/{id}         |                               | App\Http\Controllers\Backend\OrderController@recentsellpeoduct                    | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_order/product/topsell/{id}            |                               | App\Http\Controllers\Backend\OrderController@topsellpeoduct                       | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_order/products                        |                               | App\Http\Controllers\Backend\OrderController@admproduct                           | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_order/statusUpdateByCheckbox          |                               | App\Http\Controllers\Backend\OrderController@statusUpdateByCheckbox               | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_order/store/Invoice                   |                               | App\Http\Controllers\Backend\OrderController@storeInvoice                         | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_order/updateComment                   |                               | App\Http\Controllers\Backend\OrderController@updateComments                       | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_order/users                           |                               | App\Http\Controllers\Backend\OrderController@users                                | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_order/zones                           |                               | App\Http\Controllers\Backend\OrderController@zone                                 | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | POST      | admin_order/{id}                            |                               | App\Http\Controllers\Backend\OrderController@update                               | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_order/{status}                        |                               | App\Http\Controllers\Backend\OrderController@ordersByStatus                       | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_orders                                | admin_orders.index            | App\Http\Controllers\Backend\OrderController@index                                | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | POST      | admin_orders                                | admin_orders.store            | App\Http\Controllers\Backend\OrderController@store                                | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_orders/create                         | admin_orders.create           | App\Http\Controllers\Backend\OrderController@create                               | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_orders/{admin_order}                  | admin_orders.show             | App\Http\Controllers\Backend\OrderController@show                                 | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | PUT|PATCH | admin_orders/{admin_order}                  | admin_orders.update           | App\Http\Controllers\Backend\OrderController@update                               | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | DELETE    | admin_orders/{admin_order}                  | admin_orders.destroy          | App\Http\Controllers\Backend\OrderController@destroy                              | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | admin_orders/{admin_order}/edit             | admin_orders.edit             | App\Http\Controllers\Backend\OrderController@edit                                 | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | api/order                                   |                               | App\Http\Controllers\OrderController@getorder                                     | api                                        
+        |
+|        | GET|HEAD  | api/pay/make/{slug}                         |                               | App\Http\Controllers\WebviewController@makesomething                              | api                                        
+        |
+|        | GET|HEAD  | api/products                                |                               | App\Http\Controllers\OrderController@getproduct                                   | api                                        
+        |
+|        | GET|HEAD  | assign_user_complain                        |                               | App\Http\Controllers\ComplanenoteController@assignusertocomplain                  | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | cart                                        |                               | App\Http\Controllers\CartController@cart                                          | web                                        
+        |
+|        | GET|HEAD  | check/username/{username}                   |                               | App\Http\Controllers\Auth\AuthenticatedSessionController@checkusername            | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\RedirectIfAuthenticated        |
+|        | GET|HEAD  | checkout                                    |                               | App\Http\Controllers\CartController@checkout                                      | web                                        
+        |
+|        | GET|HEAD  | cities                                      | cities.index                  | App\Http\Controllers\CityController@index                                         | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | POST      | cities                                      | cities.store                  | App\Http\Controllers\CityController@store                                         | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | cities/create                               | cities.create                 | App\Http\Controllers\CityController@create                                        | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | cities/{city}                               | cities.show                   | App\Http\Controllers\CityController@show                                          | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | PUT|PATCH | cities/{city}                               | cities.update                 | App\Http\Controllers\CityController@update                                        | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | DELETE    | cities/{city}                               | cities.destroy                | App\Http\Controllers\CityController@destroy                                       | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | cities/{city}/edit                          | cities.edit                   | App\Http\Controllers\CityController@edit                                          | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | PUT       | city/status                                 |                               | App\Http\Controllers\CityController@updatestatus                                  | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | POST      | city/{id}                                   |                               | App\Http\Controllers\CityController@update                                        | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | combo-offer                                 | combo                         | App\Http\Controllers\WebviewController@combo                                      | web                                        
+        |
+|        | GET|HEAD  | complain/comment/get                        |                               | App\Http\Controllers\ComplanenoteController@getComplainNote                       | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | complain/comment/update                     |                               | App\Http\Controllers\ComplanenoteController@store                                 | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | complain/complain/Sync                      |                               | App\Http\Controllers\ComplainController@complainSync                              | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | complain/complains                          | complains.index               | App\Http\Controllers\ComplainController@index                                     | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | POST      | complain/complains                          | complains.store               | App\Http\Controllers\ComplainController@store                                     | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | complain/complains/create                   | complains.create              | App\Http\Controllers\ComplainController@create                                    | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | complain/complains/{complain}               | complains.show                | App\Http\Controllers\ComplainController@show                                      | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | PUT|PATCH | complain/complains/{complain}               | complains.update              | App\Http\Controllers\ComplainController@update                                    | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | DELETE    | complain/complains/{complain}               | complains.destroy             | App\Http\Controllers\ComplainController@destroy                                   | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | complain/complains/{complain}/edit          | complains.edit                | App\Http\Controllers\ComplainController@edit                                      | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | PUT       | complain/complainstatus                     |                               | App\Http\Controllers\ComplainController@updatestatus                              | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | complain/create/complain                    |                               | App\Http\Controllers\ComplanenoteController@createcomplain                        | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | POST      | complain/data/{id}                          |                               | App\Http\Controllers\ComplainController@update                                    | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | complain/data/{status}                      | complain.info                 | App\Http\Controllers\ComplainController@complaindata                              | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | complain/{status}                           |                               | App\Http\Controllers\ComplainController@subindex                                  | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | confirm-password                            | password.confirm              | App\Http\Controllers\Auth\ConfirmablePasswordController@show                      | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\Authenticate           
+        |
+|        | POST      | confirm-password                            |                               | App\Http\Controllers\Auth\ConfirmablePasswordController@store                     | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\Authenticate           
+        |
+|        | PUT       | courier/status                              |                               | App\Http\Controllers\CourierController@updatestatus                               | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | POST      | courier/{id}                                |                               | App\Http\Controllers\CourierController@update                                     | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | couriers                                    | couriers.index                | App\Http\Controllers\CourierController@index                                      | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | POST      | couriers                                    | couriers.store                | App\Http\Controllers\CourierController@store                                      | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | couriers/create                             | couriers.create               | App\Http\Controllers\CourierController@create                                     | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | couriers/{courier}                          | couriers.show                 | App\Http\Controllers\CourierController@show                                       | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | PUT|PATCH | couriers/{courier}                          | couriers.update               | App\Http\Controllers\CourierController@update                                     | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | DELETE    | couriers/{courier}                          | couriers.destroy              | App\Http\Controllers\CourierController@destroy                                    | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | couriers/{courier}/edit                     | couriers.edit                 | App\Http\Controllers\CourierController@edit                                       | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | POST      | download-excle                              | orderdata-export              | App\Http\Controllers\InvoiceController@downloadexcle                              | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | POST      | email/verification-notification             | verification.send             | App\Http\Controllers\Auth\EmailVerificationNotificationController@store           | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\Authenticate           
+        |
+|        |           |                                             |                               |              
+                                                                     | Illuminate\Routing\Middleware\ThrottleRequests:6,1 |
+|        | GET|HEAD  | findorder-byproduct                         |                               | App\Http\Controllers\Backend\OrderController@findByproduct                        | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | forgot-password                             | password.request              | App\Http\Controllers\Auth\PasswordResetLinkController@create                      | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\RedirectIfAuthenticated        |
+|        | POST      | forgot-password                             | password.email                | App\Http\Controllers\Auth\PasswordResetLinkController@store                       | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\RedirectIfAuthenticated        |
+|        | GET|HEAD  | get-cart-content                            |                               | App\Http\Controllers\CartController@getcartcontent                                | web                                        
+        |
+|        | GET|HEAD  | get-checkcart-content                       |                               | App\Http\Controllers\CartController@getcheckcartcontent                           | web                                        
+        |
+|        | GET|HEAD  | get-search-content                          |                               | App\Http\Controllers\WebviewController@searchcontent                              | web                                        
+        |
+|        | GET|HEAD  | get/products/by-category                    |                               | App\Http\Controllers\WebviewController@getcategoryproduct                         | web                                        
+        |
+|        | GET|HEAD  | get/products/by-subcategory                 |                               | App\Http\Controllers\WebviewController@getsubcategoryproduct                      | web                                        
+        |
+|        | GET|HEAD  | get/slug/products                           |                               | App\Http\Controllers\WebviewController@getslugproduct                             | web                                        
+        |
+|        | GET|HEAD  | getorder/bybarcode                          |                               | App\Http\Controllers\FindorderController@orderdetails                             | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | load-cart                                   |                               | App\Http\Controllers\CartController@loadcart                                      | web                                        
+        |
+|        | GET|HEAD  | login                                       | loginview                     | App\Http\Controllers\Auth\AuthenticatedSessionController@create                   | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\RedirectIfAuthenticated        |
+|        | POST      | login                                       | login                         | App\Http\Controllers\Auth\AuthenticatedSessionController@store                    | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\RedirectIfAuthenticated        |
+|        | GET|HEAD  | logout                                      | logout                        | App\Http\Controllers\Auth\AuthenticatedSessionController@destroy                  | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\Authenticate           
+        |
+|        | GET|HEAD  | menu/{slug}                                 |                               | App\Http\Controllers\WebviewController@menuindex                                  | web                                        
+        |
+|        | GET|HEAD  | order-received                              | payment.methood               | App\Http\Controllers\CartController@payment                                       | web                                        
+        |
+|        | POST      | order-to-cart                               |                               | App\Http\Controllers\CartController@ordertocart                                   | web                                        
+        |
+|        | GET|HEAD  | order/admin_order/status                    |                               | App\Http\Controllers\Backend\OrderController@updateorderstatus                    | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | order/complain                              |                               | App\Http\Controllers\Backend\OrderController@complain                             | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | order/complete                              |                               | App\Http\Controllers\CartController@complete                                      | web                                        
+        |
+|        | GET|HEAD  | order/dashboard                             |                               | App\Http\Controllers\Backend\Auth\AuthenticatedSessionController@userdashboard    | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | order/manager/dashboard                     |                               | App\Http\Controllers\Backend\Auth\AuthenticatedSessionController@managerdashboard | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | orderby-product                             |                               | App\Http\Controllers\Backend\OrderController@orderByproductindex                  | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | PUT       | payment/status                              |                               | App\Http\Controllers\PaymentController@updatestatus                               | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | POST      | payment/{id}                                |                               | App\Http\Controllers\PaymentController@update                                     | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | payments                                    | payments.index                | App\Http\Controllers\PaymentController@index                                      | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | POST      | payments                                    | payments.store                | App\Http\Controllers\PaymentController@store                                      | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | payments/create                             | payments.create               | App\Http\Controllers\PaymentController@create                                     | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | payments/{payment}                          | payments.show                 | App\Http\Controllers\PaymentController@show                                       | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | PUT|PATCH | payments/{payment}                          | payments.update               | App\Http\Controllers\PaymentController@update                                     | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | DELETE    | payments/{payment}                          | payments.destroy              | App\Http\Controllers\PaymentController@destroy                                    | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | payments/{payment}/edit                     | payments.edit                 | App\Http\Controllers\PaymentController@edit                                       | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | PUT       | paymenttype/status                          |                               | App\Http\Controllers\PaymenttypeController@updatestatus                           | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | POST      | paymenttype/{id}                            |                               | App\Http\Controllers\PaymenttypeController@update                                 | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | paymenttypes                                | paymenttypes.index            | App\Http\Controllers\PaymenttypeController@index                                  | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | POST      | paymenttypes                                | paymenttypes.store            | App\Http\Controllers\PaymenttypeController@store                                  | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | paymenttypes/create                         | paymenttypes.create           | App\Http\Controllers\PaymenttypeController@create                                 | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | paymenttypes/{paymenttype}                  | paymenttypes.show             | App\Http\Controllers\PaymenttypeController@show                                   | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | PUT|PATCH | paymenttypes/{paymenttype}                  | paymenttypes.update           | App\Http\Controllers\PaymenttypeController@update                                 | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | DELETE    | paymenttypes/{paymenttype}                  | paymenttypes.destroy          | App\Http\Controllers\PaymenttypeController@destroy                                | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | paymenttypes/{paymenttype}/edit             | paymenttypes.edit             | App\Http\Controllers\PaymenttypeController@edit                                   | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | POST      | press/order                                 |                               | App\Http\Controllers\OrderController@pressorder                                   | web                                        
+        |
+|        | GET|HEAD  | product/{slug}                              |                               | App\Http\Controllers\WebviewController@productdetails                             | web                                        
+        |
+|        | GET|HEAD  | products/brand/{slug}                       |                               | App\Http\Controllers\WebviewController@brandproduct                               | web                                        
+        |
+|        | GET|HEAD  | products/category/{slug}                    |                               | App\Http\Controllers\WebviewController@categoryproduct                            | web                                        
+        |
+|        | GET|HEAD  | products/sub/category/{slug}                |                               | App\Http\Controllers\WebviewController@subcategoryproduct                         | web                                        
+        |
+|        | POST      | purchase/{id}                               |                               | App\Http\Controllers\PurchaseController@update                                    | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | purchases                                   | purchases.index               | App\Http\Controllers\PurchaseController@index                                     | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | POST      | purchases                                   | purchases.store               | App\Http\Controllers\PurchaseController@store                                     | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | purchases/create                            | purchases.create              | App\Http\Controllers\PurchaseController@create                                    | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | purchases/{purchase}                        | purchases.show                | App\Http\Controllers\PurchaseController@show                                      | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | PUT|PATCH | purchases/{purchase}                        | purchases.update              | App\Http\Controllers\PurchaseController@update                                    | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | DELETE    | purchases/{purchase}                        | purchases.destroy             | App\Http\Controllers\PurchaseController@destroy                                   | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | purchases/{purchase}/edit                   | purchases.edit                | App\Http\Controllers\PurchaseController@edit                                      | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | register                                    | registerview                  | App\Http\Controllers\Auth\RegisteredUserController@create                         | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\RedirectIfAuthenticated        |
+|        | POST      | register                                    |                               | App\Http\Controllers\Auth\RegisteredUserController@store                          | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\RedirectIfAuthenticated        |
+|        | POST      | remove-cart                                 |                               | App\Http\Controllers\CartController@destroy                                       | web                                        
+        |
+|        | POST      | reset-password                              | password.update               | App\Http\Controllers\Auth\NewPasswordController@store                             | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\RedirectIfAuthenticated        |
+|        | GET|HEAD  | reset-password/{token}                      | password.reset                | App\Http\Controllers\Auth\NewPasswordController@create                            | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\RedirectIfAuthenticated        |
+|        | GET|HEAD  | sanctum/csrf-cookie                         |                               | Laravel\Sanctum\Http\Controllers\CsrfCookieController@show                        | web                                        
+        |
+|        | GET|HEAD  | scanbarcode                                 | orderchange.bybarcode         | App\Http\Controllers\FindorderController@scanbarcode                              | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | search                                      | search                        | App\Http\Controllers\WebviewController@search                                     | web                                        
+        |
+|        | GET|HEAD  | stocks                                      | stocks.index                  | App\Http\Controllers\StockController@index                                        | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | POST      | stocks                                      | stocks.store                  | App\Http\Controllers\StockController@store                                        | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | stocks/create                               | stocks.create                 | App\Http\Controllers\StockController@create                                       | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | stocks/{stock}                              | stocks.show                   | App\Http\Controllers\StockController@show                                         | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | PUT|PATCH | stocks/{stock}                              | stocks.update                 | App\Http\Controllers\StockController@update                                       | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | DELETE    | stocks/{stock}                              | stocks.destroy                | App\Http\Controllers\StockController@destroy                                      | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | stocks/{stock}/edit                         | stocks.edit                   | App\Http\Controllers\StockController@edit                                         | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | PUT       | supplier/status                             |                               | App\Http\Controllers\SupplierController@updatestatus                              | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | POST      | supplier/{id}                               |                               | App\Http\Controllers\SupplierController@update                                    | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | suppliers                                   | suppliers.index               | App\Http\Controllers\SupplierController@index                                     | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | POST      | suppliers                                   | suppliers.store               | App\Http\Controllers\SupplierController@store                                     | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | suppliers/create                            | suppliers.create              | App\Http\Controllers\SupplierController@create                                    | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | suppliers/{supplier}                        | suppliers.show                | App\Http\Controllers\SupplierController@show                                      | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | PUT|PATCH | suppliers/{supplier}                        | suppliers.update              | App\Http\Controllers\SupplierController@update                                    | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | DELETE    | suppliers/{supplier}                        | suppliers.destroy             | App\Http\Controllers\SupplierController@destroy                                   | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | suppliers/{supplier}/edit                   | suppliers.edit                | App\Http\Controllers\SupplierController@edit                                      | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | POST      | track-now                                   |                               | App\Http\Controllers\WebviewController@orderTrakingNow                            | web                                        
+        |
+|        | GET|HEAD  | track-order                                 |                               | App\Http\Controllers\WebviewController@orderTraking                               | web                                        
+        |
+|        | GET|HEAD  | update-cart                                 |                               | App\Http\Controllers\CartController@cartcontent                                   | web                                        
+        |
+|        | POST      | update-cart                                 |                               | App\Http\Controllers\CartController@updatecart                                    | web                                        
+        |
+|        | POST      | update/paymentmethood                       |                               | App\Http\Controllers\OrderController@updatepaymentmethood                         | web                                        
+        |
+|        | POST      | update/profile                              |                               | App\Http\Controllers\WebviewController@updateprofile                              | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\Authenticate:web               |
+|        | GET|HEAD  | user/dashboard                              | dashboard                     | Closure                                                                           | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\Authenticate:web               |
+|        | GET|HEAD  | user/order                                  |                               | App\Http\Controllers\Backend\OrderController@userorder                            | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | user/profile                                |                               | App\Http\Controllers\WebviewController@profile                                    | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\Authenticate:web               |
+|        | GET|HEAD  | user/purchase_history                       |                               | App\Http\Controllers\WebviewController@orderhistory                               | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\Authenticate:web               |
+|        | GET|HEAD  | venture/{slug}                              |                               | App\Http\Controllers\WebviewController@index                                      | web                                        
+        |
+|        | GET|HEAD  | verify-email                                | verification.notice           | App\Http\Controllers\Auth\EmailVerificationPromptController@__invoke              | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\Authenticate           
+        |
+|        | GET|HEAD  | verify-email/{id}/{hash}                    | verification.verify           | App\Http\Controllers\Auth\VerifyEmailController@__invoke                          | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\Authenticate           
+        |
+|        |           |                                             |                               |              
+                                                                     | Illuminate\Routing\Middleware\ValidateSignature    |
+|        |           |                                             |                               |              
+                                                                     | Illuminate\Routing\Middleware\ThrottleRequests:6,1 |
+|        | GET|HEAD  | view/categories                             |                               | App\Http\Controllers\WebviewController@allcategories                              | web                                        
+        |
+|        | PUT       | zone/status                                 |                               | App\Http\Controllers\ZoneController@updatestatus                                  | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | POST      | zone/{id}                                   |                               | App\Http\Controllers\ZoneController@update                                        | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | zones                                       | zones.index                   | App\Http\Controllers\ZoneController@index                                         | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | POST      | zones                                       | zones.store                   | App\Http\Controllers\ZoneController@store                                         | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | zones/create                                | zones.create                  | App\Http\Controllers\ZoneController@create                                        | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|        | GET|HEAD  | zones/{zone}                                | zones.show                    | App\Http\Controllers\ZoneController@show                                          | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|                                      | zones.update                  | App\Http\Controllers\ZoneController@update                                        | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+|                                   | zones.destroy                 | App\Http\Controllers\ZoneController@destroy                                       | web                                        
+        |
+|        |           |                                             |                               |              
+                                                                     | App\Http\Middleware\AdminAuthenticate:admin        |
+        |
+|        |           |                                             |                               |                                                                                   | App\Http\Middleware\AdminAuthenticate:admin        |
+|        |
+
+
+GET|HEAD  | {slug}/products
+| DELETE    | zones/{zone}  
+| PUT|PATCH | zones/{zone}     
