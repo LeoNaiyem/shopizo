@@ -96,14 +96,14 @@
             </div>
             <div class="col-12 d-block d-sm-none">
                 <div class="module-heading">
-                    <p class="module-title text-center">© {{ App\Models\Basicinfo::first()->copyright }} | <a href="https://ELITEDESIGN.COM.BD/" target="_blank"><span style="color: white;">Website Designed by: Elite Design</span></a></p>
+                    <p class="module-title text-center">© {{ App\Models\Basicinfo::first()->copyright }} | <a href="https://leonaiyem.onrender.com/" target="_blank"><span style="color: white;">Pixels & Passion by LeoNaiyem</span></a></p>
                 </div>
             </div>
             <div class="row" id="d-lg-none">
 
                 <div class="col-xs-12 col-sm-12 col-md-3">
                     <div class="module-heading">
-                        <p class="module-title text-center">© {{ App\Models\Basicinfo::first()->copyright }} | <a href="https://ELITEDESIGN.COM.BD/" target="_blank"><span style="color: white;">Website Designed by: Elite Design</span></a></p>
+                        <p class="module-title text-center">© {{ App\Models\Basicinfo::first()->copyright }} | <a href="https://leonaiyem.onrender.com/" target="_blank"><span style="color: white;">Pixels & Passion by LeoNaiyem</span></a></p>
                     </div>
                     <!-- /.module-heading -->
                     <ul id="footerul" style="font-size: 13px;">

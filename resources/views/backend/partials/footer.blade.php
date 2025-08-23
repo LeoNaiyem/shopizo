@@ -5,7 +5,7 @@
                 &copy; <a href="#">{{ env('APP_NAME') }}</a>, All Right Reserved.
             </div>
             <div class="col-12 col-sm-6 text-center text-sm-end">
-                Designed By <a href="">ELITEDESIGN.COM.BD</a>
+                Pixels & Passion by <a href="https://leonaiyem.onrender.com/" target="_blank">LeoNaiyem</a>
             </div>
         </div>
     </div>

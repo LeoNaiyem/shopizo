@@ -1,24 +1,27 @@
 <header class="header-style-1">
 
-  
+
     <!-- ============================================== TOP MENU ============================================== -->
     <div class="top-barhead animate-dropdown" id="d-sm-none">
         <div class="container">
             <div class="header-top-inner">
                 <div class="cnt-account">
-                    <ul class="list-unstyled">  
+                    <ul class="list-unstyled">
                         @if (Auth::id())
                             <li><a href="{{ url('user/dashboard') }}"><i class="icon fas fa-user"></i>Dashboard</a></li>
                         @else
                             <li><a href="{{ url('login') }}">Sign In</a></li>
-                            <li><a href="javascript:void(0);">|</a></li>
+                            |
                             <li><a href="{{ url('register') }}">Sign Up</a></li>
+                            |
+                            <li><a href="{{ url('/admin/dashboard') }}">Admin Login (Demo)</a></li>
                         @endif
                     </ul>
-                </div> 
+                </div>
                 <div class="cnt-account" style="float: left;">
-                    <ul class="list-unstyled">   
-                        <li><a href="tel:+88{{$basicinfo->phone_one}}"><i class="icon fas fa-phone"></i>Have any question? Call Us +88{{$basicinfo->phone_one}}</a></li> 
+                    <ul class="list-unstyled">
+                        <li><a href="tel:+88{{$basicinfo->phone_one}}"><i class="icon fas fa-phone"></i>Have any
+                                question? Call Us +88{{$basicinfo->phone_one}}</a></li>
                     </ul>
                 </div>
                 <!-- /.cnt-cart -->
@@ -33,7 +36,7 @@
     <div class="col-12" id="">
         <marquee behavior="" direction="" style="color:#818a91"> {{ $basicinfo->marquee_text }}</marquee>
     </div>
-    
+
     <div class="main-header" id="myHeader" style="background: #fff;border-bottom: 1px solid #e9e9e9;">
         <div class="container">
             <div class="row" style="margin: 0">
@@ -97,18 +100,18 @@
                         <!-- /.dropdown-menu-->
                     </div>
                     <!-- /.dropdown-cart -->
- 
+
                     <div class="d-none d-lg-inline-block" id="d-sm-none" style="float:right;padding-right: 15px;">
                         <div class="nav-wishlist-box" id="wishlist" style="    float: right;">
                             <a href="tel:09613100400" class="nav-box-link">
-                                <i class="fa-solid fa-heart" id="bookmarkicon" style="color:#24a86c"></i>  
+                                <i class="fa-solid fa-heart" id="bookmarkicon" style="color:#24a86c"></i>
                             </a>
                         </div>
                     </div>
 
                     <a type="button" class="search-button d-lg-none" data-bs-toggle="modal"
-                        data-bs-target="#searchPopup" style="float: right;font-size: 23px; color: #b9b9b9;"
-                        href="#" id="smsericon"> <i class="fas fa-search"
+                        data-bs-target="#searchPopup" style="float: right;font-size: 23px; color: #b9b9b9;" href="#"
+                        id="smsericon"> <i class="fas fa-search"
                             style="margin-top: 6px;margin-left: 7px;color:#24a86c"></i></a>
                     <!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= -->
                 </div>
@@ -138,10 +141,9 @@
             @forelse ($categories as $category)
                 @if (count($category->subcategories) > 0)
                     <li>
-                        <a href="{{ url('products/category/' . $category->slug) }}" class="collapsed"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#id{{ $category->id }}">{{ $category->category_name }}<i
-                                class="fas fa-plus" aria-hidden="true" id="plusicon"></i></a>
+                        <a href="{{ url('products/category/' . $category->slug) }}" class="collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#id{{ $category->id }}">{{ $category->category_name }}<i class="fas fa-plus"
+                                aria-hidden="true" id="plusicon"></i></a>
                         <ul class="collapse level2-styles" id="id{{ $category->id }}">
                             @foreach ($category->subcategories as $subcategory)
                                 <li>
@@ -153,8 +155,7 @@
                     </li>
                 @else
                     <li>
-                        <a
-                            href="{{ url('products/category/' . $category->slug) }}">{{ $category->category_name }}</a>
+                        <a href="{{ url('products/category/' . $category->slug) }}">{{ $category->category_name }}</a>
                     </li>
                 @endif
             @empty

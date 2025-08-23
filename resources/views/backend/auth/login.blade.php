@@ -95,11 +95,11 @@
                             <form action="{{ route('admin.login') }}" method="post">
                                 @csrf
                                 <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@ayebazar.com" required>
+                                    <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@ayebazar.com" value="naiyem@gmail.com" required>
                                     <label for="floatingInput">Email address</label>
                                 </div>
                                 <div class="form-floating mb-4">
-                                    <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password" required>
+                                    <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password" value="111111" required>
                                     <label for="floatingPassword">Password</label>
                                 </div>
                                 <div class="d-flex align-items-center justify-content-between mb-4">

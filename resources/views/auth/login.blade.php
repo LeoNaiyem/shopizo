@@ -23,12 +23,12 @@
                         <div class="form-group">
                             <label class="info-title" for="exampleInputEmail1">Email<span>*</span></label>
                             <input type="email" name="email" class="form-control unicase-form-control text-input"
-                                id="exampleInputEmail1">
+                                id="exampleInputEmail1" value="leo@gmail.com">
                         </div>
                         <div class="form-group">
                             <label class="info-title" for="exampleInputPassword1">Password <span>*</span></label>
                             <input type="password" name="password" class="form-control unicase-form-control text-input"
-                                id="exampleInputPassword1">
+                                id="exampleInputPassword1" value="111111">
                         </div>
                         <div class="radio outer-xs">
                             <label>
