@@ -24,7 +24,7 @@ INSERT INTO `shzo_addbanners` (`id`,`add_link`,`add_image`,`status`,`created_at`
  (10,'http://localhost/ayebazar/','public/webview/assets/images/banners/home-banner1.jpg','Active','2025-08-21 11:38:53','2025-08-21 11:38:53'),
  (11,'http://localhost/ayebazar/','public/webview/assets/images/banners/home-banner1.jpg','Active','2025-08-21 11:38:53','2025-08-21 11:38:53'),
  (12,'http://localhost/ayebazar/','public/webview/assets/images/banners/home-banner1.jpg','Active','2025-08-21 11:38:53','2025-08-21 11:38:53');
-/*!40000 ALTER TABLE `addbanners` ENABLE KEYS */;
+
 
 
 --
@@ -52,12 +52,12 @@ CREATE TABLE `shzo_admins` (
 -- Dumping data for table `admins`
 --
 
-/*!40000 ALTER TABLE `admins` DISABLE KEYS */;
+
 INSERT INTO `shzo_admins` (`id`,`name`,`phone`,`email`,`email_verified_at`,`password`,`status`,`profile`,`remember_token`,`created_at`,`updated_at`) VALUES 
  (1,'Elite design (Super Admin)','01775457008','info@elitedesign.com.bd',NULL,'$2y$10$scCdZAYnnJnw.qgn/QJI2.uSW.jVtF6JXaAnUusfgpvQvwatmy3rS','Active','public/images/admin/profile/1700475609_shopping-bag.png',NULL,'2022-06-01 09:01:09','2024-06-14 08:29:21'),
  (12,'Naiyem Hossain(Super Admin)','01635663575','naiyem@gmail.com',NULL,'$2y$10$1cEXvovlM9hV45oKJknFLufUGqP13CmEk7stfa6f//W26jIeXuCAW','Active','public/images/admin/profile/1755778174_channels4_profile.jpg',NULL,'2025-08-21 11:09:11','2025-08-21 12:09:34'),
  (13,'Abdullah Md. Muraiem(Super Admin)','01928558628','md.muraiem@gmail.com',NULL,'$2y$10$VFKXlJj4hdSidnxcdHQ51OKguIGbJvPS6KC5MCdZeJyO9fMGXD4pi','Active',NULL,NULL,'2025-08-21 11:38:51','2025-08-21 11:38:51');
-/*!40000 ALTER TABLE `admins` ENABLE KEYS */;
+
 
 
 --
@@ -78,12 +78,12 @@ CREATE TABLE `shzo_attributes` (
 -- Dumping data for table `attributes`
 --
 
-/*!40000 ALTER TABLE `attributes` DISABLE KEYS */;
+
 INSERT INTO `shzo_attributes` (`id`,`attribute_name`,`status`,`created_at`,`updated_at`) VALUES 
  (1,'Weight','Active','2022-06-12 10:09:25','2023-09-08 08:40:05'),
  (2,'Size','Active','2022-06-12 10:09:32','2025-08-21 12:34:43'),
  (3,'Colour','Active','2022-06-13 17:18:47','2025-08-21 12:34:41');
-/*!40000 ALTER TABLE `attributes` ENABLE KEYS */;
+
 
 
 --
@@ -101,14 +101,14 @@ CREATE TABLE `shzo_attrvalues` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `attrvalues_attribute_id_foreign` (`attribute_id`),
-  CONSTRAINT `attrvalues_attribute_id_foreign` FOREIGN KEY (`attribute_id`) REFERENCES `attributes` (`id`) ON DELETE CASCADE
+  CONSTRAINT `attrvalues_attribute_id_foreign` FOREIGN KEY (`attribute_id`) REFERENCES `shzo_attributes` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `attrvalues`
 --
 
-/*!40000 ALTER TABLE `attrvalues` DISABLE KEYS */;
+
 INSERT INTO `shzo_attrvalues` (`id`,`attribute_id`,`attribute_name`,`value`,`status`,`created_at`,`updated_at`) VALUES 
  (1,3,'Colour','Black','Active','2023-09-08 08:40:50','2023-09-08 08:40:50'),
  (2,3,'Colour','Blue','Active','2023-09-08 08:41:03','2023-09-08 08:41:03'),
@@ -169,7 +169,7 @@ INSERT INTO `shzo_attrvalues` (`id`,`attribute_id`,`attribute_name`,`value`,`sta
  (58,3,'Colour','Orange','Active','2023-11-03 15:19:06','2023-11-03 15:19:06'),
  (59,3,'Colour','Silver','Active','2023-11-03 15:19:26','2023-11-03 15:19:26'),
  (60,1,'Weight','200 Gram','Active','2024-08-12 23:11:31','2024-08-12 23:11:31');
-/*!40000 ALTER TABLE `attrvalues` ENABLE KEYS */;
+
 
 
 --
@@ -221,12 +221,12 @@ CREATE TABLE `shzo_basicinfos` (
 -- Dumping data for table `basicinfos`
 --
 
-/*!40000 ALTER TABLE `basicinfos` DISABLE KEYS */;
+
 INSERT INTO `shzo_basicinfos` (`id`,`usd_rate`,`phone_one`,`phone_two`,`email`,`logo`,`address`,`facebook_pixel`,`google_analytics`,`chat_box`,`marquee_text`,`inside_dhaka_charge`,`outside_dhaka_charge`,`insie_dhaka`,`outside_dhaka`,`cash_on_delivery`,`refund_rule`,`contact`,`facebook`,`twitter`,`google`,`rss`,`pinterest`,`linkedin`,`youtube`,`service_payment_status`,`created_at`,`updated_at`,`favicon`,`app`,`copyright`,`og_images`,`meta_tittle`,`meta_description`,`meta_keyword`,`site_sologan`) VALUES 
  (1,NULL,'01775457008','01954578089','info@elitedesign.com.bd','public/images/categorybanner/1719230105_1718356830_logo (1).png','House: Falcon Mart, AFESS, Saudi Colony, Dhaka Cantonment, Dhaka-1206','','','','Notice:\r\nWe are currently working on updating and improving our website. Some features may not be fully functional as the site is in demo mode. Thank you for your patience and understanding during this update process.','60','130','2-3 working days','3-4 working days','ON','Within 7 Days','01775457008','https://www.facebook.com',NULL,NULL,NULL,NULL,NULL,NULL,'Itstation','2022-07-30 04:20:59','2025-08-21 12:43:40','public/images/categorybanner/1719230117_1580885551.png','https://www.youtube.com/','All rights reserved by LeoNaiyem','public/images/categorybanner/1719230133_og.png','Bagdoom','Bangladesh&#39;s best online shopping store with 17+ million products at resounding discounts in dhaka, ctg &amp; All across Bangladesh with cash on delivery (COD)','daraz,shop','Largest Ecommerce Website in Bangladesh'),
  (2,0.00,'+8801928558628','+8801647368141','support@ayebazar.com','public/webview/assets/images/logo.png','House:22,Road:4,Block:D,Estern Housing,Mirpur:11.5',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Itstation','2025-08-21 11:30:58','2025-08-21 11:30:58',NULL,'','','','','','',''),
  (3,0.00,'+8801928558628','+8801647368141','support@ayebazar.com','public/webview/assets/images/logo.png','House:22,Road:4,Block:D,Estern Housing,Mirpur:11.5',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Itstation','2025-08-21 11:38:53','2025-08-21 11:38:53',NULL,'','','','','','','');
-/*!40000 ALTER TABLE `basicinfos` ENABLE KEYS */;
+
 
 
 --
@@ -249,13 +249,13 @@ CREATE TABLE `shzo_brands` (
 -- Dumping data for table `brands`
 --
 
-/*!40000 ALTER TABLE `brands` DISABLE KEYS */;
+
 INSERT INTO `shzo_brands` (`id`,`brand_name`,`slug`,`brand_icon`,`status`,`created_at`,`updated_at`) VALUES 
  (2,'Xiaomi Redmi','xiaomi-redmi','public/images/brand/1698824585_Xiaomi-logo.png','Active','2023-11-01 07:43:05','2023-11-01 07:48:30'),
  (3,'Samsung','samsung','public/images/brand/1698824732_Samsung.jpg','Active','2023-11-01 07:45:32','2023-11-01 07:45:32'),
  (4,'Realme','realme','public/images/brand/1698824777_realme.png','Active','2023-11-01 07:46:17','2023-11-01 07:46:17'),
  (5,'New','new','public/images/brand/1716631930_1663407230_kidszone.webp','Active','2024-05-25 10:12:10','2024-09-25 23:32:02');
-/*!40000 ALTER TABLE `brands` ENABLE KEYS */;
+
 
 
 --
@@ -281,7 +281,7 @@ CREATE TABLE `shzo_categories` (
 -- Dumping data for table `categories`
 --
 
-/*!40000 ALTER TABLE `categories` DISABLE KEYS */;
+
 INSERT INTO `shzo_categories` (`id`,`category_name`,`slug`,`category_icon`,`category_image`,`front_status`,`status`,`created_at`,`updated_at`) VALUES 
  (37,'Men\'s Clothing & Fashion.','mens-clothing-fashion','public/images/category/1719230832_1zeM14zNX9RB2KcUKjhSIpOy9IfXcyknPsWrO5e0.webp',NULL,1,'Active','2024-06-24 12:07:13','2024-10-22 06:57:41'),
  (38,'Women\'s Clothing & Fashion.','womens-clothing-fashion','public/images/category/1719230875_Wqsoc7xawVjv3oUgSMWlhi8IvrFzRErT2clwzJac.webp',NULL,0,'Active','2024-06-24 12:07:55','2024-10-22 06:57:53'),
@@ -292,7 +292,7 @@ INSERT INTO `shzo_categories` (`id`,`category_name`,`slug`,`category_icon`,`cate
  (44,'Automobile & Motorcycle','automobile-motorcycle','public/images/category/1719247942_bike.webp',NULL,1,'Active','2024-06-24 16:52:22','2024-09-26 01:08:16'),
  (45,'Kids & Toy','kids-toy','public/images/category/1719248009_Pm4F1YvDhezPaxJIkeUUOYPoKWLlszqwmPed3qnL.webp',NULL,1,'Active','2024-06-24 16:53:29','2024-09-25 23:32:55'),
  (47,'Home Decoration','home-decoration','public/images/category/1719248115_IRWf4O1mNSSLU9iw87FJctyLLeoShekA3mC4UKck.webp',NULL,1,'Active','2024-06-24 16:55:15','2024-09-25 23:32:54');
-/*!40000 ALTER TABLE `categories` ENABLE KEYS */;
+
 
 
 --
@@ -315,7 +315,7 @@ CREATE TABLE `shzo_cities` (
 -- Dumping data for table `cities`
 --
 
-/*!40000 ALTER TABLE `cities` DISABLE KEYS */;
+
 INSERT INTO `shzo_cities` (`id`,`courier_id`,`division`,`cityName`,`status`,`created_at`,`updated_at`) VALUES 
  (1,1,NULL,'Barishal','Active','2020-04-28 15:13:29','2020-04-28 15:13:29'),
  (2,1,NULL,'Chandpur','Active','2020-04-28 15:13:30','2020-04-28 15:13:30'),
@@ -997,7 +997,7 @@ INSERT INTO `shzo_cities` (`id`,`courier_id`,`division`,`cityName`,`status`,`cre
  (763,2,'Chattogram','chakoria','Active','2022-07-13 16:53:06','2022-08-03 06:07:35'),
  (764,1,'Barishal','bhola sadar','Active','2022-07-19 15:09:33','2022-08-03 06:07:33'),
  (765,28,'Chattogram','Noakhali','Active','2023-11-16 09:57:20','2023-11-16 09:57:20');
-/*!40000 ALTER TABLE `cities` ENABLE KEYS */;
+
 
 
 --
@@ -1021,7 +1021,7 @@ CREATE TABLE `shzo_comments` (
 -- Dumping data for table `comments`
 --
 
-/*!40000 ALTER TABLE `comments` DISABLE KEYS */;
+
 INSERT INTO `shzo_comments` (`id`,`order_id`,`comment`,`user_id`,`admin_id`,`status`,`created_at`,`updated_at`) VALUES 
  (1,1,'BG771 Order Has Been Created for Elite design (Super Admin)',NULL,1,'0','2024-06-14 08:40:28','2024-06-14 08:40:28'),
  (2,2,'BG772 Order Has Been Created for Elite design (Super Admin)',NULL,1,'0','2024-06-16 13:50:22','2024-06-16 13:50:22'),
@@ -1164,7 +1164,7 @@ INSERT INTO `shzo_comments` (`id`,`order_id`,`comment`,`user_id`,`admin_id`,`sta
  (139,89,'BG7789 Order Has Been Created for Elite design (Super Admin)',NULL,1,'0','2025-08-21 10:49:38','2025-08-21 10:49:38'),
  (140,90,'BG7790 Order Has Been Created for Elite design (Super Admin)',NULL,1,'0','2025-08-21 13:21:12','2025-08-21 13:21:12'),
  (141,91,'BG7791 Order Has Been Created for Elite design (Super Admin)',NULL,1,'0','2025-08-21 13:51:11','2025-08-21 13:51:11');
-/*!40000 ALTER TABLE `comments` ENABLE KEYS */;
+
 
 
 --
@@ -1195,10 +1195,10 @@ CREATE TABLE `shzo_complains` (
 -- Dumping data for table `complains`
 --
 
-/*!40000 ALTER TABLE `complains` DISABLE KEYS */;
+
 INSERT INTO `shzo_complains` (`id`,`order_invoice_id`,`web_ID`,`store_id`,`customer_phone`,`complain_message`,`site_name`,`solved_by`,`solved_date`,`status`,`complainDate`,`solvedDate`,`admin_id`,`created_at`,`updated_at`) VALUES 
  (1,'5322',NULL,1,'2342424','423test','Bagdoom',NULL,NULL,'Pending','2024-10-22',NULL,1,'2024-10-22 07:30:18','2024-10-22 07:30:18');
-/*!40000 ALTER TABLE `complains` ENABLE KEYS */;
+
 
 
 --
@@ -1222,10 +1222,10 @@ CREATE TABLE `shzo_complanenotes` (
 -- Dumping data for table `complanenotes`
 --
 
-/*!40000 ALTER TABLE `complanenotes` DISABLE KEYS */;
+
 INSERT INTO `shzo_complanenotes` (`id`,`invoice_id`,`complain_id`,`comment`,`admin_id`,`status`,`created_at`,`updated_at`) VALUES 
  (1,NULL,1,'Elite design (Super Admin) Successfully Assign #1 Complain to Super Admin Elite design (Super Admin)',1,'0','2024-10-22 07:30:29','2024-10-22 07:30:29');
-/*!40000 ALTER TABLE `complanenotes` ENABLE KEYS */;
+
 
 
 --
@@ -1249,7 +1249,7 @@ CREATE TABLE `shzo_couriers` (
 -- Dumping data for table `couriers`
 --
 
-/*!40000 ALTER TABLE `couriers` DISABLE KEYS */;
+
 INSERT INTO `shzo_couriers` (`id`,`courierName`,`hasCity`,`hasZone`,`courierCharge`,`status`,`created_at`,`updated_at`) VALUES 
  (1,'Sundorban','on','on','120','Inactive','2020-04-28 19:19:40','2023-11-20 14:45:10'),
  (2,'Sa Paribahan','on','on','120','Inactive','2020-04-28 19:43:17','2023-11-20 14:45:19'),
@@ -1269,7 +1269,7 @@ INSERT INTO `shzo_couriers` (`id`,`courierName`,`hasCity`,`hasZone`,`courierChar
  (29,'Ecourier','on','on','100','Active','2023-11-20 14:44:47','2024-06-14 09:32:19'),
  (30,'RedX','on','off','80','Active','2024-06-27 00:51:03','2024-06-27 00:51:33'),
  (31,'RedX','off','on','150','Active','2024-06-27 00:51:18','2024-06-27 00:51:41');
-/*!40000 ALTER TABLE `couriers` ENABLE KEYS */;
+
 
 
 --
@@ -1292,7 +1292,7 @@ CREATE TABLE `shzo_customers` (
 -- Dumping data for table `customers`
 --
 
-/*!40000 ALTER TABLE `customers` DISABLE KEYS */;
+
 INSERT INTO `shzo_customers` (`id`,`order_id`,`customerName`,`customerPhone`,`customerAddress`,`created_at`,`updated_at`) VALUES 
  (3,1,'Md Abusayed','01330742895','eeeeeeeeeeee','2024-06-14 08:40:28','2024-06-14 08:40:28'),
  (4,2,'Md Abdul Rashid','01775457008','nbnnb','2024-06-16 13:50:22','2024-06-16 13:50:22'),
@@ -1385,7 +1385,7 @@ INSERT INTO `shzo_customers` (`id`,`order_id`,`customerName`,`customerPhone`,`cu
  (91,89,'Kenyon Rodgers','01524578965','dfdfdsfsdf','2025-08-21 10:49:38','2025-08-21 10:49:38'),
  (92,90,'Erica Cannon','01565894566','dfdfds','2025-08-21 13:21:12','2025-08-21 13:21:12'),
  (93,91,'Erica Cannon','01245896578','dfsdfsd','2025-08-21 13:51:11','2025-08-21 13:51:11');
-/*!40000 ALTER TABLE `customers` ENABLE KEYS */;
+
 
 
 --
@@ -1409,8 +1409,8 @@ CREATE TABLE `shzo_failed_jobs` (
 -- Dumping data for table `failed_jobs`
 --
 
-/*!40000 ALTER TABLE `failed_jobs` DISABLE KEYS */;
-/*!40000 ALTER TABLE `failed_jobs` ENABLE KEYS */;
+
+
 
 
 --
@@ -1432,7 +1432,7 @@ CREATE TABLE `shzo_information` (
 -- Dumping data for table `information`
 --
 
-/*!40000 ALTER TABLE `information` DISABLE KEYS */;
+
 INSERT INTO `shzo_information` (`id`,`key`,`value`,`created_at`,`updated_at`) VALUES 
  (1,'about_us','....','2025-08-21 11:38:51','2025-08-21 11:38:51'),
  (2,'contact_us','....','2025-08-21 11:38:51','2025-08-21 11:38:51'),
@@ -1448,7 +1448,7 @@ INSERT INTO `shzo_information` (`id`,`key`,`value`,`created_at`,`updated_at`) VA
  (12,'new-products-1',NULL,'2023-10-29 06:41:43','2023-10-29 06:42:18'),
  (13,'home','<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>','2024-08-12 23:15:24','2024-08-12 23:15:24'),
  (14,'combo-offer',NULL,'2024-08-12 23:15:47','2024-10-23 18:33:04');
-/*!40000 ALTER TABLE `information` ENABLE KEYS */;
+
 
 
 --
@@ -1468,12 +1468,12 @@ CREATE TABLE `shzo_invoices` (
 -- Dumping data for table `invoices`
 --
 
-/*!40000 ALTER TABLE `invoices` DISABLE KEYS */;
+
 INSERT INTO `shzo_invoices` (`id`,`order_id`,`created_at`,`updated_at`) VALUES 
  (3,'a:1:{i:0;s:2:\"22\";}','2024-10-03 00:09:33','2024-10-03 00:09:33'),
  (4,'a:1:{i:0;s:2:\"22\";}','2024-10-03 00:10:45','2024-10-03 00:10:45'),
  (5,'a:1:{i:0;s:2:\"56\";}','2024-11-19 23:43:39','2024-11-19 23:43:39');
-/*!40000 ALTER TABLE `invoices` ENABLE KEYS */;
+
 
 
 --
@@ -1497,14 +1497,14 @@ CREATE TABLE `shzo_menus` (
 -- Dumping data for table `menus`
 --
 
-/*!40000 ALTER TABLE `menus` DISABLE KEYS */;
+
 INSERT INTO `shzo_menus` (`id`,`menu_name`,`slug`,`menu_banner`,`status`,`created_at`,`updated_at`) VALUES 
  (6,'Home','home','public/images/menu/1662543788_icon2.png','Active','2022-09-07 09:43:08','2024-09-25 23:34:00'),
  (7,'Combo Offer','combo-offer','public/images/menu/1662543698_product-3.jpg','Active','2022-09-07 09:41:38','2024-09-25 23:33:58'),
  (8,'Brands','brands','public/images/menu/1662543743_danpitee.png','Active','2022-09-07 09:42:06','2024-06-26 23:52:10'),
  (11,'Flash Sale','flash-sale','public/images/menu/1662543860_slides-1.jpg','Active','2022-09-07 09:44:20','2024-09-25 23:34:05'),
  (12,'New Products','new-products','public/images/menu/1694250632_2775139_398065-PD2B5P-161.jpg','Active','2023-09-09 09:10:32','2024-09-25 23:35:24');
-/*!40000 ALTER TABLE `menus` ENABLE KEYS */;
+
 
 
 --
@@ -1523,7 +1523,7 @@ CREATE TABLE `shzo_migrations` (
 -- Dumping data for table `migrations`
 --
 
-/*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
+
 INSERT INTO `shzo_migrations` (`id`,`migration`,`batch`) VALUES 
  (1,'2014_10_12_000000_create_users_table',24),
  (2,'2014_10_12_100000_create_password_resets_table',1),
@@ -1561,7 +1561,7 @@ INSERT INTO `shzo_migrations` (`id`,`migration`,`batch`) VALUES
  (37,'2022_08_03_104040_create_invoices_table',22),
  (38,'2022_08_04_100314_create_complains_table',23),
  (39,'2022_08_04_100558_create_complanenotes_table',23);
-/*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
+
 
 
 --
@@ -1575,15 +1575,15 @@ CREATE TABLE `shzo_model_has_permissions` (
   `model_id` bigint(20) unsigned NOT NULL,
   PRIMARY KEY (`permission_id`,`model_id`,`model_type`),
   KEY `model_has_permissions_model_id_model_type_index` (`model_id`,`model_type`),
-  CONSTRAINT `model_has_permissions_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE
+  CONSTRAINT `model_has_permissions_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `shzo_permissions` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `model_has_permissions`
 --
 
-/*!40000 ALTER TABLE `model_has_permissions` DISABLE KEYS */;
-/*!40000 ALTER TABLE `model_has_permissions` ENABLE KEYS */;
+
+
 
 
 --
@@ -1597,21 +1597,21 @@ CREATE TABLE `shzo_model_has_roles` (
   `model_id` bigint(20) unsigned NOT NULL,
   PRIMARY KEY (`role_id`,`model_id`,`model_type`),
   KEY `model_has_roles_model_id_model_type_index` (`model_id`,`model_type`),
-  CONSTRAINT `model_has_roles_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE
+  CONSTRAINT `model_has_roles_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `shzo_roles` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `model_has_roles`
 --
 
-/*!40000 ALTER TABLE `model_has_roles` DISABLE KEYS */;
+
 INSERT INTO `shzo_model_has_roles` (`role_id`,`model_type`,`model_id`) VALUES 
  (1,'App\\Models\\Admin',1),
  (1,'App\\Models\\Admin',12),
  (2,'App\\Models\\Admin',11),
  (5,'App\\Models\\User',9),
  (9,'App\\Models\\User',8);
-/*!40000 ALTER TABLE `model_has_roles` ENABLE KEYS */;
+
 
 
 --
@@ -1639,7 +1639,7 @@ CREATE TABLE `shzo_orderproducts` (
 -- Dumping data for table `orderproducts`
 --
 
-/*!40000 ALTER TABLE `orderproducts` DISABLE KEYS */;
+
 INSERT INTO `shzo_orderproducts` (`id`,`order_id`,`product_id`,`productCode`,`productName`,`color`,`size`,`productPrice`,`discount`,`quantity`,`created_at`,`updated_at`) VALUES 
  (8,7,200,'BNL000200','Premium Half Sleeve p olo Shirt for Men',NULL,NULL,300,0.00,1,'2024-06-24 17:18:05','2024-06-24 17:18:05'),
  (9,8,205,'BNL000205','China Print Gown 3 PCS',NULL,NULL,100,0.00,1,'2024-06-25 21:42:10','2024-06-25 21:42:10'),
@@ -1751,7 +1751,7 @@ INSERT INTO `shzo_orderproducts` (`id`,`order_id`,`product_id`,`productCode`,`pr
  (126,90,205,'BNL000205','China Print Gown 3 PCS','Blue','M',100,0.00,1,'2025-08-21 13:21:12','2025-08-21 13:21:12'),
  (127,90,200,'BNL000200','Premium Half Sleeve p olo Shirt for Men',NULL,NULL,300,0.00,1,'2025-08-21 13:21:12','2025-08-21 13:21:12'),
  (128,91,207,'BNL000207','Dhupian Saree + Punjabi (Couple set)',NULL,NULL,500,0.00,1,'2025-08-21 13:51:11','2025-08-21 13:51:11');
-/*!40000 ALTER TABLE `orderproducts` ENABLE KEYS */;
+
 
 
 --
@@ -1794,7 +1794,7 @@ CREATE TABLE `shzo_orders` (
 -- Dumping data for table `orders`
 --
 
-/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+
 INSERT INTO `shzo_orders` (`id`,`invoiceID`,`entry_complete`,`web_id`,`user_id`,`Payment`,`customerNote`,`memo`,`payment_type_id`,`payment_id`,`paymentAgentNumber`,`courier_id`,`city_id`,`zone_id`,`subTotal`,`deliveryCharge`,`discountCharge`,`paymentAmount`,`orderDate`,`deliveryDate`,`completeDate`,`last_updated`,`status`,`admin_id`,`store_id`,`created_at`,`updated_at`) VALUES 
  (1,'BG771',NULL,NULL,'8',NULL,'hhh',NULL,NULL,NULL,NULL,23,0,0,510,60,0,0,'2024-07-04',NULL,NULL,NULL,'Invoiced',1,1,'2024-06-14 08:40:28','2024-10-24 00:13:23'),
  (2,'BG772',NULL,NULL,'9',NULL,'ghhh',NULL,NULL,NULL,NULL,23,0,0,570,120,0,0,'2024-07-04',NULL,NULL,NULL,'Invoiced',1,1,'2024-06-16 13:50:22','2024-08-19 16:54:32'),
@@ -1887,7 +1887,7 @@ INSERT INTO `shzo_orders` (`id`,`invoiceID`,`entry_complete`,`web_id`,`user_id`,
  (89,'BG7789',NULL,NULL,'16',NULL,'',NULL,NULL,NULL,NULL,NULL,NULL,NULL,1200,60,NULL,NULL,'2025-08-21',NULL,NULL,NULL,'Processing',1,1,'2025-08-21 10:49:38','2025-08-21 10:49:38'),
  (90,'BG7790',NULL,NULL,'38',NULL,'',NULL,NULL,NULL,NULL,NULL,NULL,NULL,400,60,NULL,NULL,'2025-08-21',NULL,NULL,NULL,'Processing',1,1,'2025-08-21 13:21:12','2025-08-21 13:21:12'),
  (91,'BG7791',NULL,NULL,'38',NULL,'',NULL,NULL,NULL,NULL,NULL,NULL,NULL,500,60,NULL,NULL,'2025-08-21',NULL,NULL,NULL,'Processing',1,1,'2025-08-21 13:51:10','2025-08-21 13:51:10');
-/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
+
 
 
 --
@@ -1906,8 +1906,8 @@ CREATE TABLE `shzo_password_resets` (
 -- Dumping data for table `password_resets`
 --
 
-/*!40000 ALTER TABLE `password_resets` DISABLE KEYS */;
-/*!40000 ALTER TABLE `password_resets` ENABLE KEYS */;
+
+
 
 
 --
@@ -1933,7 +1933,7 @@ CREATE TABLE `shzo_paymentcompletes` (
 -- Dumping data for table `paymentcompletes`
 --
 
-/*!40000 ALTER TABLE `paymentcompletes` DISABLE KEYS */;
+
 INSERT INTO `shzo_paymentcompletes` (`id`,`order_id`,`payment_type_id`,`payment_id`,`amount`,`trid`,`date`,`userID`,`created_at`,`updated_at`) VALUES 
  (1,2,NULL,NULL,0,NULL,'2024-07-04',1,'2024-05-25 10:37:50','2024-07-04 12:08:33'),
  (2,15,NULL,NULL,0,NULL,'2024-06-30',1,'2024-07-01 01:55:42','2024-07-01 01:55:42'),
@@ -1943,7 +1943,7 @@ INSERT INTO `shzo_paymentcompletes` (`id`,`order_id`,`payment_type_id`,`payment_
  (6,56,NULL,NULL,0,NULL,'2024-09-25',1,'2024-09-25 23:43:10','2024-09-25 23:43:10'),
  (7,76,5,NULL,0,NULL,'2024-11-19',1,'2024-11-20 05:11:26','2024-11-20 05:11:26'),
  (8,78,3,NULL,0,'01829317005','2024-11-20',1,'2024-11-20 16:11:51','2024-11-20 16:11:51');
-/*!40000 ALTER TABLE `paymentcompletes` ENABLE KEYS */;
+
 
 
 --
@@ -1965,13 +1965,13 @@ CREATE TABLE `shzo_paymenticons` (
 -- Dumping data for table `paymenticons`
 --
 
-/*!40000 ALTER TABLE `paymenticons` DISABLE KEYS */;
+
 INSERT INTO `shzo_paymenticons` (`id`,`payment_type_name`,`payment_icon`,`status`,`created_at`,`updated_at`) VALUES 
  (5,'Bkash','public/images/paymenticon/1718357911_images.png','Active','2024-06-14 09:38:31','2024-06-14 09:40:07'),
  (7,'Nagod','public/images/paymenticon/1718357950_unnamed.png','Active','2024-06-14 09:39:10','2024-06-14 09:39:10'),
  (9,'Rocket','public/images/paymenticon/1718357996_dutch-bangla-rocket-logo-B4D1CC458D-seeklogo.com.png','Inactive','2024-06-14 09:39:56','2024-10-24 00:19:22'),
  (10,'Binance','public/images/paymenticon/1723359436_inbound7929903375792872703.png','Active','2024-08-11 12:57:16','2024-08-11 12:57:16');
-/*!40000 ALTER TABLE `paymenticons` ENABLE KEYS */;
+
 
 
 --
@@ -1988,15 +1988,15 @@ CREATE TABLE `shzo_payments` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `payments_payment_type_id_foreign` (`payment_type_id`),
-  CONSTRAINT `payments_payment_type_id_foreign` FOREIGN KEY (`payment_type_id`) REFERENCES `paymenttypes` (`id`) ON DELETE CASCADE
+  CONSTRAINT `payments_payment_type_id_foreign` FOREIGN KEY (`payment_type_id`) REFERENCES `shzo_paymenttypes` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `payments`
 --
 
-/*!40000 ALTER TABLE `payments` DISABLE KEYS */;
-/*!40000 ALTER TABLE `payments` ENABLE KEYS */;
+
+
 
 
 --
@@ -2017,13 +2017,13 @@ CREATE TABLE `shzo_paymenttypes` (
 -- Dumping data for table `paymenttypes`
 --
 
-/*!40000 ALTER TABLE `paymenttypes` DISABLE KEYS */;
+
 INSERT INTO `shzo_paymenttypes` (`id`,`paymentTypeName`,`status`,`created_at`,`updated_at`) VALUES 
  (1,'Bkash','Inactive','2022-11-05 13:59:52','2025-08-21 12:06:17'),
  (3,'Roket','Active','2022-11-08 04:47:01','2022-11-08 04:47:01'),
  (5,'Cash On Delivery','Active','2024-06-27 00:54:47','2024-06-27 00:54:47'),
  (7,'Upay','Active','2024-11-19 23:44:52','2025-08-21 12:06:37');
-/*!40000 ALTER TABLE `paymenttypes` ENABLE KEYS */;
+
 
 
 --
@@ -2046,7 +2046,7 @@ CREATE TABLE `shzo_permissions` (
 -- Dumping data for table `permissions`
 --
 
-/*!40000 ALTER TABLE `permissions` DISABLE KEYS */;
+
 INSERT INTO `shzo_permissions` (`id`,`name`,`guard_name`,`group_name`,`created_at`,`updated_at`) VALUES 
  (1,'dashboard.view','admin','dashboard','2022-06-01 09:01:10','2022-06-01 09:01:10'),
  (2,'dashboard.edit','admin','dashboard','2022-06-01 09:01:10','2022-06-01 09:01:10'),
@@ -2071,7 +2071,7 @@ INSERT INTO `shzo_permissions` (`id`,`name`,`guard_name`,`group_name`,`created_a
  (21,'dashboard.edit','web','dashboard','2022-06-01 09:01:10','2022-06-01 09:01:10'),
  (22,'profile.view','web','profile','2022-06-01 09:01:10','2022-06-01 09:01:10'),
  (23,'profile.edit','web','profile','2022-06-01 09:01:10','2022-06-01 09:01:10');
-/*!40000 ALTER TABLE `permissions` ENABLE KEYS */;
+
 
 
 --
@@ -2098,8 +2098,8 @@ CREATE TABLE `shzo_personal_access_tokens` (
 -- Dumping data for table `personal_access_tokens`
 --
 
-/*!40000 ALTER TABLE `personal_access_tokens` DISABLE KEYS */;
-/*!40000 ALTER TABLE `personal_access_tokens` ENABLE KEYS */;
+
+
 
 
 --
@@ -2121,12 +2121,12 @@ CREATE TABLE `shzo_policymenus` (
 -- Dumping data for table `policymenus`
 --
 
-/*!40000 ALTER TABLE `policymenus` DISABLE KEYS */;
+
 INSERT INTO `shzo_policymenus` (`id`,`policy_menu_name`,`policy_text`,`status`,`created_at`,`updated_at`) VALUES 
  (1,'MONEY BACK','30 Days Money Back Guarantee','Active','2022-06-05 15:52:19','2022-07-20 17:15:01'),
  (3,'SPECIAL SALE','Extra $5 off on all items','Active','2022-06-05 15:52:42','2022-06-07 15:10:58'),
  (4,'FREE SHIPPING','Shipping on orders over $99','Active','2022-07-16 07:44:08','2022-07-20 17:15:02');
-/*!40000 ALTER TABLE `policymenus` ENABLE KEYS */;
+
 
 
 --
@@ -2167,15 +2167,15 @@ CREATE TABLE `shzo_products` (
   PRIMARY KEY (`id`),
   KEY `products_category_id_foreign` (`category_id`),
   KEY `products_subcategory_id_foreign` (`subcategory_id`),
-  CONSTRAINT `products_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE,
-  CONSTRAINT `products_subcategory_id_foreign` FOREIGN KEY (`subcategory_id`) REFERENCES `subcategories` (`id`) ON DELETE CASCADE
+  CONSTRAINT `products_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `shzo_categories` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `products_subcategory_id_foreign` FOREIGN KEY (`subcategory_id`) REFERENCES `shzo_subcategories` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=224 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `products`
 --
 
-/*!40000 ALTER TABLE `products` DISABLE KEYS */;
+
 INSERT INTO `shzo_products` (`id`,`category_id`,`subcategory_id`,`brand_id`,`color`,`size`,`weight`,`ProductName`,`ProductSlug`,`ProductBreaf`,`ProductDetails`,`ProductSku`,`youtube_embade`,`ProductRegularPrice`,`ProductSalePrice`,`Discount`,`ProductImage`,`ViewProductImage`,`PostImage`,`MetaTitle`,`MetaKey`,`MetaDescription`,`status`,`event`,`frature`,`top_rated`,`best_selling`,`created_at`,`updated_at`) VALUES 
  (199,37,74,2,'[\"Black\",\"Blue\",\"White\"]','[\"M\",\"L\",\"8-12 Years\"]','[\"1kg\"]','Premium Half Sleeve polo Shirt for Men','premium-half-sleeve-polo-shirt-for-men','Fabric: Pk Cotton\r\nBrand: Ahmed Lifestyle \r\nGsm: 210+(-+10)\r\nExport Quality Seweing \r\nSize: M,L,XL\r\nM Size\r\nLength -27\", Chest - 37/38\"\r\nL Size\r\nLength -28\", Chest- 39/40\"\r\nXL Size\r\nLength -29\", Chest- 41/42\"\r\nMade in: Bangladesh.','<div class=\"product-detail-header\" style=\"padding: 8px; margin: 0px 0px 10px; width: 761.266px; float: left; background-color: rgb(233, 234, 235); color: rgb(51, 51, 51); font-family: SolaimanLipi, helvetica, verdana; font-size: 14px;\"><div class=\"header-text-new\" style=\"padding: 0px; margin: 0px; float: left; width: 372.625px; font-size: 15px; color: rgb(240, 90, 40); font-family: SolaimanLipi, Helvetica, Verdana; text-decoration-line: underline;\">দ্রষ্টব্য / শর্তাবলী</div></div><div class=\"product-details-stock-condition-new-data-inner\" style=\"padding: 0px; margin: 0px 0px 0px 2px; float: left; width: 761.266px; color: rgb(51, 51, 51); font-family: SolaimanLipi, helvetica, verdana; font-size: 14px;\"><div class=\"product-details-stock-condition-text\" style=\"padding: 0px; margin: 0px; color: rgb(93, 90, 90); font-family: SolaimanLipi, Helvetica, Verdana;\"><p class=\"font-weight-bold\" style=\"padding: 0px; margin-right: 0px; margin-bottom: 10px; margin-left: 0px; color: rgb(117, 117, 117); line-height: 24px; font-weight: 600;\">লেনদেনকালে কিভাবে নিরাপদ থাকবেন তার কিছু নির্দেশনাবলী:</p><ol style=\"padding: 0px; margin-right: 0px; margin-bottom: 10px; margin-left: 4rem;\"><li style=\"padding: 0px; margin: 0px;\">সকল প্রকার লেনদেন নিজ এলাকায় করুন। বিক্রেতার সাথে সরাসরি সাক্ষাত করুন, প্রোডাক্টটি ভালোভাবে যাচাই করে নিন এবং পুরোপুরি সন্তুষ্ট হলে তারপর দাম পরিশোধ করুন।</li><li style=\"padding: 0px; margin: 0px;\">প্রোডাক্ট ও অর্থ দুটোই একই সময় লেনদেন করুন।</li></ol><p class=\"font-weight-bold\" style=\"padding: 0px; margin-right: 0px; margin-bottom: 10px; margin-left: 0px; color: rgb(117, 117, 117); line-height: 24px; font-weight: 600;\">ক্রেতাসাধারণের জন্য নির্দেশনাবলী:</p><ol style=\"padding: 0px; margin-right: 0px; margin-bottom: 10px; margin-left: 4rem;\"><li style=\"padding: 0px; margin: 0px;\">প্রোডাক্ট বুঝে পাওয়ার পূর্বে কোনো প্রকার আর্থিক লেনদেন করবেন না। যদি করে থাকেন নিজের সহজাত বিচার বুদ্ধি ব্যবহার করে বিক্রেতার সাথে কথা বলুন।</li><li style=\"padding: 0px; margin: 0px;\">আপনার আর্থিক তথ্য প্রকাশ করা থেকে বিরত থাকুন।</li></ol><p class=\"font-weight-bold\" style=\"padding: 0px; margin-right: 0px; margin-bottom: 10px; margin-left: 0px; color: rgb(117, 117, 117); line-height: 24px; font-weight: 600;\">বিক্রেতাসাধারণের জন্য নির্দেশনাবলী:</p><ol style=\"padding: 0px; margin-right: 0px; margin-bottom: 10px; margin-left: 4rem;\"><li style=\"padding: 0px; margin: 0px;\">অর্থ বুঝে পাওয়ার পূর্বে কোনো প্রোডাক্ট পাঠাবেন না। নিজের সহজাত বিচার বুদ্ধি ব্যবহার করে ক্রেতার সাথে কথা বলুন।</li></ol><p class=\"font-weight-bold\" style=\"padding: 0px; margin-right: 0px; margin-bottom: 10px; margin-left: 0px; color: rgb(117, 117, 117); line-height: 24px; font-weight: 600;\">* ক্রেতা ও বিক্রেতার মধ্যে সকল প্রকার লেনদেন ক্রেতা ও বিক্রেতা নিজ নিজ দায়িত্বে করবেন। আজকেরডিল কর্তৃপক্ষ লেনদেন সংক্রান্ত কোনো দায়িত্ব নিতে বাধ্য নন।</p></div></div>','BNL0001',NULL,'1000.00','450.00','55','public/images/product/image/17192488491984tsho.png','public/images/product/image/17192488491984tsho.webp','[\"1719248849_2.png\"]',NULL,NULL,NULL,'Active',1,0,1,0,'2024-06-24 17:07:29','2024-06-24 17:07:36'),
  (200,37,74,2,'[\"Black\",\"Blue\",\"White\"]','[\"M\",\"L\",\"8-12 Years\"]','[\"1kg\"]','Premium Half Sleeve p olo Shirt for Men','premium-half-sleeve-p-olo-shirt-for-men','Fabric: Pk Cotton\r\nBrand: Ahmed Lifestyle \r\nGsm: 210+(-+10)\r\nExport Quality Seweing \r\nSize: M,L,XL\r\nM Size\r\nLength -27\", Chest - 37/38\"\r\nL Size\r\nLength -28\", Chest- 39/40\"\r\nXL Size\r\nLength -29\", Chest- 41/42\"\r\nMade in: Bangladesh.','<div class=\"product-detail-header\" style=\"padding: 8px; margin: 0px 0px 10px; width: 761.266px; float: left; background-color: rgb(233, 234, 235); color: rgb(51, 51, 51); font-family: SolaimanLipi, helvetica, verdana; font-size: 14px;\"><div class=\"header-text-new\" style=\"padding: 0px; margin: 0px; float: left; width: 372.625px; font-size: 15px; color: rgb(240, 90, 40); font-family: SolaimanLipi, Helvetica, Verdana; text-decoration-line: underline;\">দ্রষ্টব্য / শর্তাবলী</div></div><div class=\"product-details-stock-condition-new-data-inner\" style=\"padding: 0px; margin: 0px 0px 0px 2px; float: left; width: 761.266px; color: rgb(51, 51, 51); font-family: SolaimanLipi, helvetica, verdana; font-size: 14px;\"><div class=\"product-details-stock-condition-text\" style=\"padding: 0px; margin: 0px; color: rgb(93, 90, 90); font-family: SolaimanLipi, Helvetica, Verdana;\"><p class=\"font-weight-bold\" style=\"padding: 0px; margin-right: 0px; margin-bottom: 10px; margin-left: 0px; color: rgb(117, 117, 117); line-height: 24px; font-weight: 600;\">লেনদেনকালে কিভাবে নিরাপদ থাকবেন তার কিছু নির্দেশনাবলী:</p><ol style=\"padding: 0px; margin-right: 0px; margin-bottom: 10px; margin-left: 4rem;\"><li style=\"padding: 0px; margin: 0px;\">সকল প্রকার লেনদেন নিজ এলাকায় করুন। বিক্রেতার সাথে সরাসরি সাক্ষাত করুন, প্রোডাক্টটি ভালোভাবে যাচাই করে নিন এবং পুরোপুরি সন্তুষ্ট হলে তারপর দাম পরিশোধ করুন।</li><li style=\"padding: 0px; margin: 0px;\">প্রোডাক্ট ও অর্থ দুটোই একই সময় লেনদেন করুন।</li></ol><p class=\"font-weight-bold\" style=\"padding: 0px; margin-right: 0px; margin-bottom: 10px; margin-left: 0px; color: rgb(117, 117, 117); line-height: 24px; font-weight: 600;\">ক্রেতাসাধারণের জন্য নির্দেশনাবলী:</p><ol style=\"padding: 0px; margin-right: 0px; margin-bottom: 10px; margin-left: 4rem;\"><li style=\"padding: 0px; margin: 0px;\">প্রোডাক্ট বুঝে পাওয়ার পূর্বে কোনো প্রকার আর্থিক লেনদেন করবেন না। যদি করে থাকেন নিজের সহজাত বিচার বুদ্ধি ব্যবহার করে বিক্রেতার সাথে কথা বলুন।</li><li style=\"padding: 0px; margin: 0px;\">আপনার আর্থিক তথ্য প্রকাশ করা থেকে বিরত থাকুন।</li></ol><p class=\"font-weight-bold\" style=\"padding: 0px; margin-right: 0px; margin-bottom: 10px; margin-left: 0px; color: rgb(117, 117, 117); line-height: 24px; font-weight: 600;\">বিক্রেতাসাধারণের জন্য নির্দেশনাবলী:</p><ol style=\"padding: 0px; margin-right: 0px; margin-bottom: 10px; margin-left: 4rem;\"><li style=\"padding: 0px; margin: 0px;\">অর্থ বুঝে পাওয়ার পূর্বে কোনো প্রোডাক্ট পাঠাবেন না। নিজের সহজাত বিচার বুদ্ধি ব্যবহার করে ক্রেতার সাথে কথা বলুন।</li></ol><p class=\"font-weight-bold\" style=\"padding: 0px; margin-right: 0px; margin-bottom: 10px; margin-left: 0px; color: rgb(117, 117, 117); line-height: 24px; font-weight: 600;\">* ক্রেতা ও বিক্রেতার মধ্যে সকল প্রকার লেনদেন ক্রেতা ও বিক্রেতা নিজ নিজ দায়িত্বে করবেন। আজকেরডিল কর্তৃপক্ষ লেনদেন সংক্রান্ত কোনো দায়িত্ব নিতে বাধ্য নন।</p></div></div>','BNL000200',NULL,'1000.00','300.00','70','public/images/product/image/171924901226511.png','public/images/product/image/171924901226511.webp','[\"1719249012_1.png\"]',NULL,NULL,NULL,'Active',1,0,1,0,'2024-06-24 17:10:12','2024-06-24 17:10:20'),
@@ -2191,7 +2191,7 @@ INSERT INTO `shzo_products` (`id`,`category_id`,`subcategory_id`,`brand_id`,`col
  (211,37,74,2,'[\"Light Ash\",\"Light Pink\"]','[\"L\"]','[\"1kg\"]','Exclusive Full Sle ev e Check Formal and Casual Shirt for Men','exclusive-full-sle-ev-e-check-formal-and-casual-shirt-for-men','রেডিমেড নায়রা কাট থ্রি- পিছ।\r\n\r\n✅জামা: বডি ৪৪\" লং ৪৫+\r\nবুকে রিয়েল মিরর এর কাজ করা।\r\n\r\n✅অরনা সেমি পিওর শিফন জরজেট। ফুল অরনা তে স্টন করা আছে।\r\n\r\n✅সেলোয়ার ইন্ডিয়ান সফট বাটার সিল্ক সম্পুর্ন বানানো থাকবে','<p><span style=\"font-size: 13px; color: rgb(109, 110, 113); font-family: \"Open Sans\", Arial, sans-serif;\">রেডিমেড নায়রা কাট থ্রি- পিছ।</span><br style=\"font-size: 13px; color: rgb(109, 110, 113); font-family: \"Open Sans\", Arial, sans-serif;\"><span style=\"font-size: 13px; color: rgb(109, 110, 113); font-family: \"Open Sans\", Arial, sans-serif;\">✅জামা: বডি ৪৪\" লং ৪৫+</span><br style=\"font-size: 13px; color: rgb(109, 110, 113); font-family: \"Open Sans\", Arial, sans-serif;\"><span style=\"font-size: 13px; color: rgb(109, 110, 113); font-family: \"Open Sans\", Arial, sans-serif;\">বুকে রিয়েল মিরর এর কাজ করা।</span><br style=\"font-size: 13px; color: rgb(109, 110, 113); font-family: \"Open Sans\", Arial, sans-serif;\"><br style=\"font-size: 13px; color: rgb(109, 110, 113); font-family: \"Open Sans\", Arial, sans-serif;\"><span style=\"font-size: 13px; color: rgb(109, 110, 113); font-family: \"Open Sans\", Arial, sans-serif;\">✅অরনা সেমি পিওর শিফন জরজেট। ফুল অরনা তে স্টন করা আছে।</span><br style=\"font-size: 13px; color: rgb(109, 110, 113); font-family: \"Open Sans\", Arial, sans-serif;\"><br style=\"font-size: 13px; color: rgb(109, 110, 113); font-family: \"Open Sans\", Arial, sans-serif;\"><span style=\"font-size: 13px; color: rgb(109, 110, 113); font-family: \"Open Sans\", Arial, sans-serif;\">✅সেলোয়ার ইন্ডিয়ান সফট বাটার সিল্ক সম্পুর্ন বানানো থাকবে</span><br></p>','BNL000211',NULL,'8888.00','444.00','95','public/images/product/image/171925137615693.png','public/images/product/image/171925137615693.webp','[\"1719251376_3.png\"]',NULL,NULL,NULL,'Active',1,0,1,0,'2024-06-24 17:49:36','2024-09-30 21:08:14'),
  (221,45,NULL,NULL,NULL,NULL,NULL,'abcd','abcd','tyjtyjm','<p>tthryjtyjmn</p>','BNL000213',NULL,'180.00','120.00','33','public/images/product/default.jpg','public/images/product/default.jpg',NULL,NULL,NULL,NULL,'Inactive',1,0,1,0,'2024-08-08 19:07:01','2024-09-30 21:08:08'),
  (223,39,84,0,'[\"Silver\"]','[\"XXL\"]',NULL,'Maruf','maruf','Hhh',NULL,'BNL000222','Hh','1800.00','1200.00','33','public/images/product/image/17320593444196inbound8694749153865713144.jpg','public/images/product/image/17320593444196inbound8694749153865713144.webp','[\"1732059344_inbound4745307959959707864.jpg\"]',NULL,NULL,NULL,'Active',1,0,1,0,'2024-11-20 05:35:44','2024-11-20 05:36:10');
-/*!40000 ALTER TABLE `products` ENABLE KEYS */;
+
 
 
 --
@@ -2216,7 +2216,7 @@ CREATE TABLE `shzo_purchases` (
 -- Dumping data for table `purchases`
 --
 
-/*!40000 ALTER TABLE `purchases` DISABLE KEYS */;
+
 INSERT INTO `shzo_purchases` (`id`,`invoiceID`,`date`,`product_id`,`supplier_id`,`quantity`,`status`,`created_at`,`updated_at`) VALUES 
  (1,'2023-09-08','2023-09-08',1,1,100,'Active','2023-09-08 08:29:02','2023-09-08 08:29:02'),
  (2,'2023-09-08','2023-09-08',2,1,100,'Active','2023-09-08 08:34:10','2023-09-08 08:34:10'),
@@ -2421,7 +2421,7 @@ INSERT INTO `shzo_purchases` (`id`,`invoiceID`,`date`,`product_id`,`supplier_id`
  (201,'2024-08-08','2024-08-08',221,1,100,'Active','2024-08-08 19:07:01','2024-08-08 19:07:01'),
  (202,'2024-08-12','2024-08-12',222,1,100,'Active','2024-08-12 23:13:20','2024-08-12 23:13:20'),
  (203,'2024-11-19','2024-11-19',223,1,100,'Active','2024-11-20 05:35:44','2024-11-20 05:35:44');
-/*!40000 ALTER TABLE `purchases` ENABLE KEYS */;
+
 
 
 --
@@ -2434,15 +2434,15 @@ CREATE TABLE `shzo_role_has_permissions` (
   `role_id` bigint(20) unsigned NOT NULL,
   PRIMARY KEY (`permission_id`,`role_id`),
   KEY `role_has_permissions_role_id_foreign` (`role_id`),
-  CONSTRAINT `role_has_permissions_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE,
-  CONSTRAINT `role_has_permissions_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE
+  CONSTRAINT `role_has_permissions_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `shzo_permissions` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `role_has_permissions_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `shzo_roles` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `role_has_permissions`
 --
 
-/*!40000 ALTER TABLE `role_has_permissions` DISABLE KEYS */;
+
 INSERT INTO `shzo_role_has_permissions` (`permission_id`,`role_id`) VALUES 
  (1,1),
  (1,2),
@@ -2491,7 +2491,7 @@ INSERT INTO `shzo_role_has_permissions` (`permission_id`,`role_id`) VALUES
  (23,5),
  (23,7),
  (23,9);
-/*!40000 ALTER TABLE `role_has_permissions` ENABLE KEYS */;
+
 
 
 --
@@ -2513,7 +2513,7 @@ CREATE TABLE `shzo_roles` (
 -- Dumping data for table `roles`
 --
 
-/*!40000 ALTER TABLE `roles` DISABLE KEYS */;
+
 INSERT INTO `shzo_roles` (`id`,`name`,`guard_name`,`created_at`,`updated_at`) VALUES 
  (1,'superadmin','admin','2022-06-01 09:01:10','2022-06-01 09:01:10'),
  (2,'admin','admin','2022-06-01 09:01:10','2022-06-01 09:01:10'),
@@ -2524,7 +2524,7 @@ INSERT INTO `shzo_roles` (`id`,`name`,`guard_name`,`created_at`,`updated_at`) VA
  (7,'Networker','web','2022-07-16 08:19:36','2022-07-16 08:19:36'),
  (8,'Affiliater','web','2022-07-16 08:20:09','2022-07-16 08:20:09'),
  (9,'Agent','web','2022-07-16 08:20:28','2022-07-16 08:20:28');
-/*!40000 ALTER TABLE `roles` ENABLE KEYS */;
+
 
 
 --
@@ -2547,14 +2547,14 @@ CREATE TABLE `shzo_servicepackages` (
 -- Dumping data for table `servicepackages`
 --
 
-/*!40000 ALTER TABLE `servicepackages` DISABLE KEYS */;
+
 INSERT INTO `shzo_servicepackages` (`id`,`servicepackage_name`,`package_text`,`roles`,`status`,`created_at`,`updated_at`) VALUES 
  (1,'General Customer','Buy your need.',5,'Active','2022-06-12 09:25:33','2022-07-20 17:13:45'),
  (2,'AYEBAZAR DEALER','urchase dealership and become a vendor of Ayebazar',6,'Active','2022-07-16 08:19:14','2024-06-14 08:37:37'),
  (3,'NETWORK MARKETING','Make referral and earn money',7,'Active','2022-07-16 08:21:39','2022-07-20 17:13:43'),
  (4,'AFFILIATE','Do affiliate to achieve your goal.',8,'Active','2022-07-16 08:22:18','2022-07-20 17:13:41'),
  (5,'AYEBAZAR AGENT','Become a agent and earn',9,'Active','2022-07-16 08:22:38','2024-03-13 17:42:37');
-/*!40000 ALTER TABLE `servicepackages` ENABLE KEYS */;
+
 
 
 --
@@ -2582,11 +2582,11 @@ CREATE TABLE `shzo_sliders` (
 -- Dumping data for table `sliders`
 --
 
-/*!40000 ALTER TABLE `sliders` DISABLE KEYS */;
+
 INSERT INTO `shzo_sliders` (`id`,`slider_small_title`,`slider_title`,`slider_text`,`slider_btn_name`,`slider_btn_link`,`slug`,`slider_image`,`status`,`created_at`,`updated_at`) VALUES 
  (21,'slider3','slider3','ffff','slider3','https://www.elitedesign.com.bd','slider3','public/images/slider/1719247395_7e9de680-847d-457d-9abf-cd581b17488c.jpg','Active','2024-06-24 16:41:05','2024-06-24 16:43:15'),
  (22,'slider3','slider3','hhhhh','slider3','https://www.elitedesign.com.bd','slider3-1','public/images/slider/1719247416_314973fb-8be2-4051-9930-fc3676950c47.jpg','Active','2024-06-24 16:43:36','2024-06-24 16:43:36');
-/*!40000 ALTER TABLE `sliders` ENABLE KEYS */;
+
 
 
 --
@@ -2608,7 +2608,7 @@ CREATE TABLE `shzo_stocks` (
 -- Dumping data for table `stocks`
 --
 
-/*!40000 ALTER TABLE `stocks` DISABLE KEYS */;
+
 INSERT INTO `shzo_stocks` (`id`,`product_id`,`purchase`,`stock`,`created_at`,`updated_at`) VALUES 
  (1,1,0,100,'2023-09-08 08:29:02','2023-09-08 08:29:02'),
  (2,2,0,100,'2023-09-08 08:34:10','2023-09-08 08:34:10'),
@@ -2813,7 +2813,7 @@ INSERT INTO `shzo_stocks` (`id`,`product_id`,`purchase`,`stock`,`created_at`,`up
  (201,221,0,100,'2024-08-08 19:07:01','2024-08-08 19:07:01'),
  (202,222,0,100,'2024-08-12 23:13:20','2024-08-12 23:13:20'),
  (203,223,0,100,'2024-11-20 05:35:44','2024-11-20 05:35:44');
-/*!40000 ALTER TABLE `stocks` ENABLE KEYS */;
+
 
 
 --
@@ -2833,14 +2833,14 @@ CREATE TABLE `shzo_subcategories` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `subcategories_slug_unique` (`slug`),
   KEY `subcategories_category_id_foreign` (`category_id`),
-  CONSTRAINT `subcategories_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE
+  CONSTRAINT `subcategories_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `shzo_categories` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `subcategories`
 --
 
-/*!40000 ALTER TABLE `subcategories` DISABLE KEYS */;
+
 INSERT INTO `shzo_subcategories` (`id`,`sub_category_name`,`slug`,`category_id`,`status`,`subcategory_icon`,`created_at`,`updated_at`) VALUES 
  (74,'Men\'s Shirt','mens-shirt',37,'Active','public/images/subcategory/1719248246_images.jfif','2024-06-24 16:57:26','2024-09-26 01:09:51'),
  (76,'Men\'s Pant','mens-pant',37,'Active','public/images/category/1719248338_images (3).jfif','2024-06-24 16:58:06','2024-09-26 01:09:52'),
@@ -2849,7 +2849,7 @@ INSERT INTO `shzo_subcategories` (`id`,`sub_category_name`,`slug`,`category_id`,
  (81,'Sleeping Dress','sleeping-dress',38,'Active','public/images/subcategory/1719248416_images.jfif','2024-06-24 17:00:16','2024-09-26 01:09:47'),
  (82,'Button Phone','button-phone',39,'Active','public/images/subcategory/1719248478_images.jfif','2024-06-24 17:01:18','2024-09-26 01:09:46'),
  (84,'Smart Phone','smart-phone',39,'Active','public/images/subcategory/1719248499_images.jfif','2024-06-24 17:01:39','2024-09-26 01:09:45');
-/*!40000 ALTER TABLE `subcategories` ENABLE KEYS */;
+
 
 
 --
@@ -2871,10 +2871,10 @@ CREATE TABLE `shzo_suppliers` (
 -- Dumping data for table `suppliers`
 --
 
-/*!40000 ALTER TABLE `suppliers` DISABLE KEYS */;
+
 INSERT INTO `shzo_suppliers` (`id`,`supplierName`,`supplierPhone`,`status`,`created_at`,`updated_at`) VALUES 
  (1,'BIGBAZARBD24.COM','01601551997','Active','2022-08-03 07:30:44','2023-10-29 06:02:42');
-/*!40000 ALTER TABLE `suppliers` ENABLE KEYS */;
+
 
 
 --
@@ -2904,7 +2904,7 @@ CREATE TABLE `shzo_users` (
 -- Dumping data for table `users`
 --
 
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+
 INSERT INTO `shzo_users` (`id`,`name`,`email`,`phone`,`otp`,`active_status`,`email_verified_at`,`password`,`profile`,`status`,`remember_token`,`created_at`,`updated_at`) VALUES 
  (8,'Md Abusayed','sayed@gmail.com','01330742895',NULL,'0',NULL,'$2y$10$2hQgb7RZ8PM9C/OvII2IiOPLjW7pcgdzbYbq/qSQreFiI.nwhrA5a',NULL,'Inactive',NULL,'2024-06-14 08:38:29','2024-06-14 08:38:29'),
  (9,'Md Abdul Rashid','rashid75@gmail.com','01775457008','342053','0',NULL,'$2y$10$pHMP6SR1tnWEuO.73OnZJe2PT7hcYnnyJPgQfW2tfNHGZvTdTm3SO',NULL,'Inactive',NULL,'2024-06-15 21:33:40','2024-06-15 21:33:40'),
@@ -2937,7 +2937,7 @@ INSERT INTO `shzo_users` (`id`,`name`,`email`,`phone`,`otp`,`active_status`,`ema
  (36,'Koby Fay','harry15@example.org',NULL,NULL,'0','2025-08-21 11:38:52','$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',NULL,'Inactive','rqtO7M4jJa','2025-08-21 11:38:53','2025-08-21 11:38:53'),
  (37,'Camilla Schuppe','tess54@example.com',NULL,NULL,'0','2025-08-21 11:38:52','$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',NULL,'Inactive','M1KLJ4ZfJl','2025-08-21 11:38:53','2025-08-21 11:38:53'),
  (38,'Erica Cannon','sygaqewy@mailinator.com','+1 (935) 317-1781','111542','0',NULL,'$2y$10$BAvm1U8YH95bWMx1XQFqbOGdNcVhEqyQb7eSsQ4XPaHumTbfo1WfS','public/images/user/profile/17557812253945Screenshot 2025-03-04 223437.png','Inactive',NULL,'2025-08-21 12:55:59','2025-08-21 13:00:25');
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+
 
 
 --
@@ -2961,7 +2961,7 @@ CREATE TABLE `shzo_zones` (
 -- Dumping data for table `zones`
 --
 
-/*!40000 ALTER TABLE `zones` DISABLE KEYS */;
+
 INSERT INTO `shzo_zones` (`id`,`courier_id`,`zoneId`,`city_id`,`zoneName`,`status`,`created_at`,`updated_at`) VALUES 
  (3,2,NULL,'3','Chapainawabganj Sadar','Active','2020-04-28 15:13:32','2020-04-28 15:13:32'),
  (4,2,NULL,'4','2 no gate','Active','2020-04-28 15:13:33','2020-04-28 15:13:33'),
@@ -6038,7 +6038,7 @@ INSERT INTO `shzo_zones` (`id`,`courier_id`,`zoneId`,`city_id`,`zoneName`,`statu
  (3474,10,4641,'699','Lama','Active','2022-06-13 09:50:18','2022-06-28 12:48:51'),
  (3476,10,3930,'705','Sonagazi','Active','2022-06-28 12:41:44','2022-06-28 12:44:27'),
  (3477,10,3516,'703','Daudkandi','Active','2022-06-28 12:44:08','2022-08-03 06:08:03');
-/*!40000 ALTER TABLE `zones` ENABLE KEYS */;
+
 
 
 
